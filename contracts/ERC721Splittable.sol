@@ -49,6 +49,22 @@ contract ERC721Splittable is ERC721URIStorage {
         return _attributes[tokenId];
     }
 
+    function genesisMerkleRoot () public view returns (bytes32) {
+        return _genesisMerkleRoot;
+    }
+
+    function combinationsMerkleRoot () public view returns (bytes32) {
+        return _combinationsMerkleRoot;
+    }
+
+    function maxAttributes () public view returns (uint256) {
+        return _maxAttributes;
+    }
+
+    function nextTokenId () public view returns (uint256) {
+        return _nextTokenId;
+    }
+
     function _mint(
         address to, 
         bytes32 merkleRoot,
